@@ -42,7 +42,7 @@ ENV FLASK_ENV production
 ENV PIP_ROOT_USER_ACTION ignore
 
 # USER dockeruser
-ENV USER_NAME dockeruser
+#ENV USER_NAME dockeruser
 
 ENV VERSION "1.9.0"
 
