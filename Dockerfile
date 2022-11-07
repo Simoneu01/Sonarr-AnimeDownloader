@@ -2,7 +2,6 @@ FROM python:3.9.5-slim
 
 LABEL maintainer="MainKronos"
 
-
 RUN export DEBIAN_FRONTEND=noninteractive; \
     apt-get update; \
     apt-get -y upgrade; \
@@ -15,9 +14,6 @@ RUN export DEBIAN_FRONTEND=noninteractive; \
     apt-get clean; \
     apt-get autoclean; \
     rm -rf /var/lib/apt/lists/*
-
-RUN groupadd --gid 1000 dockeruser
-RUN useradd --no-log-init -r -m --gid dockeruser --uid 1000 dockeruser 
 
 RUN pip3 install --no-cache-dir --upgrade pip
 
