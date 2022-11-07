@@ -4,6 +4,7 @@ set -e
 
 PUID=${PUID:-1000}
 PGID=${PGID:-1000}
+USER_NAME=${USER_NAME:-dockeruser}
 
 groupmod -o -g "$PGID" "$USER_NAME"
 usermod -o -u "$PUID" "$USER_NAME"
