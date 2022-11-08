@@ -29,4 +29,4 @@ chmod 777 /script -R
 
 pip3 install --upgrade --no-cache-dir --disable-pip-version-check --quiet animeworld
 
-su $USER_NAME -c "python3 -u /script/main.py"
+python3 -u /script/main.py
