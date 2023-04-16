@@ -2,12 +2,8 @@
 
 set -e
 
-PUID=${PUID:-1000}
-PGID=${PGID:-1000}
-USER_NAME=${USER_NAME:-dockeruser}
-
-groupmod -o -g "$PGID" "$USER_NAME"
-usermod -o -u "$PUID" "$USER_NAME"
+PUID=${PUID:-568}
+PGID=${PGID:-568}
 
 echo '
 -------------------------------------
@@ -23,9 +19,6 @@ touch /script/json/settings.json
 touch /script/json/table.json
 
 if [ -f connections/*.sh ]; then sed -i -e 's/\r$//' connections/*.sh; fi
-
-chown "$USER_NAME":"$USER_NAME" /script -R
-chmod 777 /script -R
 
 pip3 install --upgrade --no-cache-dir --disable-pip-version-check --quiet animeworld
 
