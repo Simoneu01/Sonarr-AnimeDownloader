@@ -11,6 +11,7 @@ RUN export DEBIAN_FRONTEND=noninteractive; \
 	apt-get -y install ffmpeg; \
 	apt-get -y install rtmpdump; \
     apt-get -y install tzdata; \
+	apt-get -y install build-essential; \
     apt-get -y install locales && locale-gen it_IT.UTF-8; \
     apt-get clean; \
     apt-get autoclean; \
